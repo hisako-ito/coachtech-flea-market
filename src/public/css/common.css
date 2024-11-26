@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box
+}
+
+body,
+input {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    background: #000000;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 40px;
+    max-width: 1540px;
+}
+
+.header-utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #FFFFFF;;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input::placeholder {
+    color: #000000;
+}
+
+.header-utilities__search-form {
+    width: 40%;
+    height: 50px;
+}
+
+.header-utilities__keyword-input {
+    padding: 10px 40px;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.header-utilities__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-utilities__logout-btn,
+.header-utilities__mypage-btn,
+.header-utilities__sell-btn {
+    height: 100%;
+}
+
+.header-utilities__logout-btn,
+.header-utilities__mypage-btn {
+    display: block;
+}
+
+.header-utilities__sell-btn {
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
