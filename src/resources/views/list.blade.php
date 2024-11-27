@@ -4,21 +4,16 @@
 <link rel="stylesheet" href="{{ asset('css/list.css')}}">
 @endsection
 
-@section('nav')
-    <form class="header-utilities__search-form" action="/search" method="get">
-    @csrf
-        <input class="header-utilities__keyword-input" type="text" name="keyword" placeholder="なにをお探しですか？" value="{{request('keyword')}}">
-    </form>
-    <div class="header-utilities__actions">
-        <a href="/login" class="header-utilities__login-btn">ログイン</
-        </a>
-        <a href="/mypage" class="header-utilities__mypage-btn">マイページ</a>
-        <form action="/sell" method="get"> <input type="submit" class="header-utilities__sell-btn" value="出品">
-        </form>
+@section('content')
+    <div class="group-list">
+        <span class="group-list_item group-list__item--recommend" tabindex="-1">おすすめ</span>
+        <span class="group-list_item group-list__item--favorite" tabindex="-1">マイリスト</span>
     </div>
 
-@endsection
-
-@section('content')
+    <div class="items-list">
+            <div class="item-card">商品画像
+                <div class="card__content">商品名</div>
+            </div>
+    </div>
 
 @endsection

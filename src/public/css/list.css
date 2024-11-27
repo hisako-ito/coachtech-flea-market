@@ -1,0 +1,46 @@
+.group-list {
+    padding: 50px 0 5px 160px;
+    border-bottom: 2px solid #5F5F5F;
+}
+
+.group-list_item {
+    margin-right: 80px;
+    color: #5F5F5F;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.group-list_item:focus {
+    color: #FF0000;
+}
+
+.items-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1540px;
+    margin: 30px 30px;
+    gap: 30px;
+}
+
+.item-card {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: gray;
+}
+
+
+/* レスポンシブ (768px以上)*/
+@media screen and (min-width: 768px) {
+    .item-card {
+        width: 30%;
+    }
+}
+
+/* レスポンシブ (1000px以上)*/
+@media screen and (min-width: 1400px) {
+    .item-card {
+        width: 25%;
+        margin-bottom: 0;
+    }
+}
