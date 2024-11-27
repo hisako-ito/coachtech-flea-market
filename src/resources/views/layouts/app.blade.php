@@ -15,20 +15,26 @@
 </head>
 
 <body>
-    <div class="app">
-        <header class="header">
-            <div class="header__inner">
-                <div class="header-utilities">
-                    <a class="header__logo" href="/">
-                        <img src="{{ asset('/images/logo.svg') }}"  alt="coachtech" class="img-logo-icon"/>
-                    </a>
-                        @yield('nav')
-                </div>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/"><img src="{{ asset('/images/logo.svg') }}"  alt="coachtech" class="img-logo-icon"/></a>
             </div>
-        </header>
-        <div class="content">
-            @yield('content')
+            <div class="header-utilities__search">
+                <form class="header-utilities__search-form">
+                @csrf
+                    <input class="header-utilities__keyword-input" type="text" name="keyword" placeholder="なにをお探しですか？" value="{{request('keyword')}}">
+                </form>
+            </div>
+            <div class="header-utilities__actions">
+                <a href="/login" class="header-utilities__login-btn">ログイン</a>
+                <a href="/mypage" class="header-utilities__mypage-btn">マイページ</a>
+                <a href="/sell" class="header-utilities__sell-btn">出品</a>
+            </div>
         </div>
+    </header>
+    <div class="content">
+        @yield('content')
     </div>
 </body>
 
