@@ -15,32 +15,50 @@
 }
 
 .items-list {
+    padding: 0 65px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1540px;
-    margin: 30px 30px;
-    gap: 30px;
+    justify-content: space-around;
 }
 
-.item-card {
+.item__card {
+    position: relative;
+}
+
+.product-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    margin-bottom: 30px;
-    background-color: gray;
 }
 
+.card__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.card__detail p {
+    margin: 0;
+}
+
+.item__card {
+    width: 100%;
+    margin-top: 60px;
+    }
 
 /* レスポンシブ (768px以上)*/
 @media screen and (min-width: 768px) {
-    .item-card {
-        width: 30%;
+    .items-list {
+        display: grid;
+        grid-template-columns: repeat(3, 31%);
     }
 }
 
 /* レスポンシブ (1000px以上)*/
 @media screen and (min-width: 1400px) {
-    .item-card {
-        width: 25%;
-        margin-bottom: 0;
+    .items-list {
+        display: grid;
+        grid-template-columns: repeat(4, 19%);
     }
 }

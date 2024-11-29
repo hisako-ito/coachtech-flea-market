@@ -30,7 +30,7 @@ a {
     grid-column: 1/2;
     display: flex;
     align-items: center;
-    height: 100%;
+
 }
 
 .header__logo img {
@@ -43,7 +43,7 @@ a {
 }
 
 .header-utilities__search-form {
-    height: 50px;
+    height: 40px;
 }
 
 input {
@@ -78,9 +78,11 @@ input::placeholder {
 .header-utilities__login-btn,
 .header-utilities__mypage-btn,
 .header-utilities__sell-btn {
-    height: 100%;
-    display: block;
     text-align: center;
+}
+
+.header-utilities__login-btn,
+.header-utilities__mypage-btn {
     width: 90px;
     padding: 10px 0;
 }
@@ -97,6 +99,9 @@ input::placeholder {
 .header-utilities__sell-btn {
     border-radius: 4px;
     font-size: 18px;
+    width: 80px;
+    padding: 5px 10px;
+    text-align: center;
     background-color: #FFFFFF;
     color: #000000;
     cursor: pointer;
