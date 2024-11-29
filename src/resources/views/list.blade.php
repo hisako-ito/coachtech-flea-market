@@ -11,9 +11,16 @@
     </div>
 
     <div class="items-list">
-            <div class="item-card">商品画像
-                <div class="card__content">商品名</div>
+        @foreach ($items as $item)
+            <div class="item__card">
+                <div class="card__img">
+                    <a href="/item/{{$item->id}}" class="product-link"></a>
+                    <img src="{{ asset($item->image) }}"  alt="商品画像">
+                </div>
+                <div class="card__detail">
+                    <p>{{$item->name}}</p>
+                </div>
             </div>
+        @endforeach
     </div>
-
 @endsection
