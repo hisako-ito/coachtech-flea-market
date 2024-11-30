@@ -1,0 +1,114 @@
+.detail-content {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+.detail-content__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+}
+
+.content__img {
+    grid-column: 1/2;
+    padding: 5%;
+}
+
+.img__card {
+    width: 75%;
+    height: 75%;
+}
+
+.img__card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.content__form {
+    grid-column: 2/3;
+    padding: 2%;
+}
+
+.item-brand-name {
+    font-size: 10px;
+}
+
+.item-price {
+    font-size: 28px;
+}
+
+.item-price::before {
+    content: "¥";
+    font-size: 16px;
+}
+
+.item-price::after {
+    content: "(税込)";
+    font-size: 16px;
+}
+
+.count-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* margin-top: 3%; */
+}
+
+.like_count,
+.comment_count {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.like_btn {
+    padding: 0;
+    cursor: pointer;
+}
+
+.img-like_icon,
+.img-comment_icon {
+    width: 25%;
+    height: 25%;
+}
+
+.like_count__number,
+.comment_count__number {
+    font-size: 10px;
+    margin-top: 3%;
+}
+
+.item-description,
+.item-information,
+.comment {
+    /* margin: 2% 0; */
+}
+
+.comment {
+    color: #5F5F5F;
+}
+
+.description__description,
+.information__category,
+.information__condition {
+    font-size: 13px;
+}
+
+.item-comment {
+    font-size: 15px;
+    margin-top: 3%;
+}
+
+.comment__form_textarea {
+    width: 100%;
+    padding: 8px 16px;
+}
+
+.button-purchase,
+.button-comment {
+    /* margin-top: 3%; */
+}
