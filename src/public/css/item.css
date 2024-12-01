@@ -8,16 +8,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 85%;
+    gap: 50px;
 }
 
 .content__img {
     grid-column: 1/2;
-    padding: 5%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .img__card {
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 90%;
 }
 
 .img__card img {
@@ -28,7 +30,11 @@
 
 .content__form {
     grid-column: 2/3;
-    padding: 2%;
+    padding-top: 1%;
+}
+
+.content__form {
+    width: 80%;
 }
 
 .item-brand-name {
@@ -53,7 +59,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    /* margin-top: 3%; */
+    margin-top: 1%;
 }
 
 .like_count,
@@ -79,23 +85,72 @@
 .like_count__number,
 .comment_count__number {
     font-size: 10px;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
-.item-description,
-.item-information,
-.comment {
-    /* margin: 2% 0; */
+.description__heading,
+.information__heading,
+.comment__heading {
+    font-size: 20px;
+    margin: 2% 0;
 }
 
-.comment {
+.comment__heading {
     color: #5F5F5F;
 }
 
-.description__description,
+.description__description {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.information__content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 30% 70%;
+    gap: 5px;
+}
+
 .information__category,
 .information__condition {
-    font-size: 13px;
+    font-size: 14px;
+}
+
+.category__list,
+.condition__content {
+    font-size: 12px;
+}
+
+.category__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ラベルのスタイル */
+.category__list label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #e63946;
+    /* 赤いテキスト */
+    border: 2px solid #e63946;
+    /* 赤い枠線 */
+    border-radius: 20px;
+    /* 丸み */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* チェックされた状態のスタイル */
+.category__list input[type="checkbox"]:checked + label {
+    background-color: #e63946;
+    color: white;
+}
+
+/* チェックボックスを隠す */
+.category__list input[type="checkbox"] {
+    display: none;
 }
 
 .item-comment {
@@ -110,5 +165,5 @@
 
 .button-purchase,
 .button-comment {
-    /* margin-top: 3%; */
+    margin-top: 2%;
 }

@@ -15,4 +15,4 @@ use App\Http\Controllers\ItemController;
 */
 
 Route::get('/', [ItemController::class, 'index']);
-Route::get('/item/{item_id}', [ItemController::class, 'getDetail']);
+Route::get('/item/{item}', [ItemController::class, 'getDetail']);
