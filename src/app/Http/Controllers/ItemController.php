@@ -15,10 +15,11 @@ class ItemController extends Controller
         return view('list',compact('items'));
     }
 
-    public function getDetail($item_id)
+    public function getDetail(Item $item)
     {
-        $item = Item::with('condition')->find($item_id);
+        $items = Item::all();
+        $categories = Category::all();
 
-        return view('item', compact('item'));
+        return view('item', compact('item','items','categories'));
     }
 }
